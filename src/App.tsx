@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Product } from "./interface/product";
+import { Products } from "./interface/product";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import { instace } from "./api";
 import Dashboard from "./pages/admin/Dashboard";
+import ProductFrom from "./component/ProductFrom";
 
 function App() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Products[]>([]);
   const nav = useNavigate();
   const fetchProducts = async () => {
-    const { data } = await instace.get(`/product`);
+    const { data } = await instace.get(`/products`);
     setProducts(data);
   };
   useEffect(() => {
@@ -18,15 +19,17 @@ function App() {
 
   const handleRemove = async (id: any) => {
     if (confirm("Bạn chắc chắn muốn xóa không")) {
-      await instace.delete(`/product/${id}`);
+      await instace.delete(`/products/${id}`);
       setProducts(products.filter((item) => item.id !== id));
     }
   };
 
-  const onSubmitProduct = async (data: Product) => {
+  const onSubmitProduct = async (data: Products) => {
     const res = await instace.post(`/products`, data);
     setProducts([...products, res.data]);
-    nav("/admin");
+    if (confirm("Thêm sản phẩm thành công")) {
+      nav("/admin");
+    }
   };
   return (
     <>
@@ -35,7 +38,15 @@ function App() {
         <Route
           path="/admin"
           element={<Dashboard products={products} onRemove={handleRemove} />}
-        ></Route>
+        />
+        <Route
+          path="/admin/product-add"
+          element={<ProductFrom onSubmit={onSubmitProduct} />}
+        />
+        <Route
+          path="/admin/product-edit/:id"
+          element={<ProductFrom onSubmit={onSubmitProduct} />}
+        />
       </Routes>
     </>
   );

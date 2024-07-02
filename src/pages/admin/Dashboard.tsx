@@ -1,8 +1,8 @@
 import React from "react";
-import { Product } from "../../interface/product";
+import { Products } from "../../interface/product";
 import { Link } from "react-router-dom";
 interface Props {
-  products: Product[];
+  products: Products[];
   onRemove: (id: any) => void;
 }
 
@@ -10,15 +10,14 @@ const Dashboard = ({ products, onRemove }: Props) => {
   return (
     <div>
       <h1>HELLO ADMIN</h1>
-      <Link to="/admin/product-add" className="btn btn-primary">
-        Thêm sản phẩm
-      </Link>
       <table className="table table-bodered table-striped text-center ">
         <thead>
           <tr>
             <th>ID</th>
             <th>Title</th>
             <th>Image</th>
+            <th>Brand</th>
+            <th>Quantity</th>
             <th>Price</th>
             <th>Description</th>
             <th>Action</th>
@@ -29,12 +28,22 @@ const Dashboard = ({ products, onRemove }: Props) => {
             <tr key={item.id}>
               <td>{item.id}</td>
               <td>{item.title}</td>
-              <td>{item.images}</td>
+              <td>
+                {
+                  <img
+                    src={item.images}
+                    alt=""
+                    style={{ width: "180px", height: "200px" }}
+                  />
+                }
+              </td>
+              <td>{item.brand}</td>
+              <td>{item.quantity}</td>
               <td>{item.price}</td>
               <td>{item.description}</td>
               <td>
                 <Link
-                  to={`/product-edit/${item.id}`}
+                  to={`/admin/product-edit/${item.id}`}
                   className="btn btn-warning"
                 >
                   Edit
@@ -50,6 +59,9 @@ const Dashboard = ({ products, onRemove }: Props) => {
           ))}
         </tbody>
       </table>
+      <Link to="/admin/product-add" className="btn btn-primary">
+        Thêm sản phẩm
+      </Link>
     </div>
   );
 };
