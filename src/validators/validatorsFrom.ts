@@ -8,3 +8,7 @@ export const productSchema = z.object({
   images: z.any(),
   brand: z.string(),
 });
+
+export const CategorySchema = z.object({
+  name: z.string().min(3),
+});

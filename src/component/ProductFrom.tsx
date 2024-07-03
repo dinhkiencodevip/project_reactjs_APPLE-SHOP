@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { productSchema } from "../validators/validatorsFrom";
-import { instace } from "../api";
-import { object } from "zod";
 
 type Props = {
   onSubmit: (data: Products) => void;

@@ -2,14 +2,18 @@ import React from "react";
 import { Products } from "../../interface/product";
 import { Link } from "react-router-dom";
 interface Props {
+  // category: Category[];
   products: Products[];
   onRemove: (id: any) => void;
 }
 
-const Dashboard = ({ products, onRemove }: Props) => {
+const Product = ({ products, onRemove }: Props) => {
   return (
     <div>
       <h1>HELLO ADMIN</h1>
+
+      {/* Product */}
+      <h2>Product</h2>
       <table className="table table-bodered table-striped text-center ">
         <thead>
           <tr>
@@ -66,4 +70,4 @@ const Dashboard = ({ products, onRemove }: Props) => {
   );
 };
 
-export default Dashboard;
+export default Product;
