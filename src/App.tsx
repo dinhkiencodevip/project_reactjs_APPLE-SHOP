@@ -5,8 +5,12 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import { instace } from "./api";
 import ProductFrom from "./component/ProductFrom";
 import HomeMain from "./pages/home/HomeMain";
-import MainAdmin from "./pages/admin/MainAdmin";
+import MainAdmin from "./pages/admin/AdminPage";
 import Product from "./pages/admin/Product";
+import AdminProduct from "./pages/admin/AdminProduct";
+import AddEditProduct from "./pages/admin/layouts/Add-EditProduct";
+import AdminCategory from "./pages/admin/AdminCategory";
+import AddEditCategory from "./pages/admin/layouts/AddEditCategory";
 function App() {
   const [products, setProducts] = useState<Products[]>([]);
   // const [category, setCategory] = useState<Category[]>([]);
@@ -27,20 +31,6 @@ function App() {
     fetchProducts();
   }, []);
   //Product
-  const handleRemove = async (id: any) => {
-    if (confirm("Bạn chắc chắn muốn xóa không")) {
-      await instace.delete(`/products/${id}`);
-      setProducts(products.filter((item) => item.id !== id));
-    }
-  };
-
-  const onSubmitProduct = async (data: Products) => {
-    const res = await instace.post(`/products`, data);
-    setProducts([...products, res.data]);
-    if (confirm("Thêm sản phẩm thành công")) {
-      nav("/admin");
-    }
-  };
   //end Product
 
   //CateGory
@@ -63,24 +53,13 @@ function App() {
     <>
       <Routes>
         <Route index element={<HomeMain />}></Route>
-        <Route
-          path="/admin"
-          element={
-            <MainAdmin products={products} handleRemove={handleRemove} />
-          }
-        ></Route>
-        <Route
-          path="/admin/product"
-          element={<Product products={products} onRemove={handleRemove} />}
-        />
-        <Route
-          path="/admin/product-add"
-          element={<ProductFrom onSubmit={onSubmitProduct} />}
-        />
-        <Route
-          path="/admin/product-edit/:id"
-          element={<ProductFrom onSubmit={onSubmitProduct} />}
-        />
+        <Route path="/admin" element={<MainAdmin />}></Route>
+        <Route path="/admin/product" element={<AdminProduct />} />
+        <Route path="/admin/product-add" element={<AddEditProduct />} />
+        <Route path="/admin/product-edit/:id" element={<AddEditProduct />} />
+        <Route path="/admin/category" element={<AdminCategory />} />
+        <Route path="/admin/category-add" element={<AddEditCategory />} />
+        <Route path="/admin/category-edit/:id" element={<AddEditCategory />} />
       </Routes>
     </>
   );

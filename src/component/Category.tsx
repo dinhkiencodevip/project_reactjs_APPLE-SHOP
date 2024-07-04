@@ -20,7 +20,7 @@ const CategoryFrom = ({ onSubmit }: Props) => {
   });
 
   return (
-    <div>
+    <div className="edit-addProduct">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>{id ? "Edit Category" : "Add Category"}</h1>
         <div className="mb-3">
@@ -30,7 +30,7 @@ const CategoryFrom = ({ onSubmit }: Props) => {
           <input
             type="text"
             className="form-control"
-            {...(register("name"), { required: true })}
+            {...register("name")}
           ></input>
           {errors.name && (
             <span className="text-danger">{errors.name.message}</span>

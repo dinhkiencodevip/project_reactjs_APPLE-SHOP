@@ -1,20 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Products } from "../interface/product";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { productSchema } from "../validators/validatorsFrom";
+import { Category } from "../interface/category";
 
 type Props = {
-  onSubmit: (data: Products) => void;
+  onSubmit: (data: Products | Category) => void;
+  categorys: Category[];
 };
 
-const ProductFrom = ({ onSubmit }: Props) => {
+const ProductFrom = ({ onSubmit, categorys }: Props) => {
   const { id } = useParams();
   const {
     register,
     formState: { errors },
-    reset,
+    // reset,
     handleSubmit,
   } = useForm<Products>({
     resolver: zodResolver(productSchema),
@@ -27,9 +29,23 @@ const ProductFrom = ({ onSubmit }: Props) => {
   //   };
   // }, []);
   return (
-    <div>
+    <div className="edit-addProduct">
       <form onSubmit={handleSubmit(onSubmit)}>
         <h1>{id ? "Edit product" : "Add Product"}</h1>
+        <div className="mb-3">
+          <label htmlFor="category" className="form-label">
+            Category
+          </label>
+          <select
+            id="category"
+            className="form-control"
+            {...register("category")}
+          >
+            {categorys.map((item) => (
+              <option key={id}>{item.name}</option>
+            ))}
+          </select>
+        </div>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title

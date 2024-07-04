@@ -37,3 +37,11 @@
   width: 400px;
   height: 500px;
 }
+.product {
+  width: 83%;
+  float: right;
+}
+.edit-addProduct {
+  width: 83%;
+  float: right;
+}

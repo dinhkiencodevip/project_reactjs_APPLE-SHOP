@@ -10,5 +10,18 @@
       "description": "1"
     }
   ],
-  "category": [{}]
+  "category": [
+    {
+      "id": "7bb8",
+      "name": "IPhone"
+    },
+    {
+      "id": "982a",
+      "name": "Oppo"
+    },
+    {
+      "id": "c4b7",
+      "name": "SamSung"
+    }
+  ]
 }

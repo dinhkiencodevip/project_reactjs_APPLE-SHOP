@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MenuAdmin = () => {
   return (
@@ -31,31 +32,14 @@ const MenuAdmin = () => {
               <i className="fa fa-tachometer-alt me-2" />
               Dashboard
             </a>
-            <div className="nav-item dropdown">
-              <a
-                href="#"
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-              >
-                <i className="fa fa-laptop me-2" />
-                Elements
-              </a>
-              <div className="dropdown-menu bg-transparent border-0">
-                <a href="button.html" className="dropdown-item">
-                  Buttons
-                </a>
-                <a href="typography.html" className="dropdown-item">
-                  Typography
-                </a>
-                <a href="element.html" className="dropdown-item">
-                  Other Elements
-                </a>
-              </div>
-            </div>
-            <a href="widget.html" className="nav-item nav-link">
+            <Link to="/admin/product" className="nav-item nav-link">
+              <i className="fa fa-tachometer-alt me-2" />
+              Product
+            </Link>
+            <Link to="/admin/category" className="nav-item nav-link">
               <i className="fa fa-th me-2" />
-              Widgets
-            </a>
+              Category
+            </Link>
             <a href="form.html" className="nav-item nav-link">
               <i className="fa fa-keyboard me-2" />
               Forms
