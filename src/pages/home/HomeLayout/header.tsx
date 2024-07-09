@@ -1,6 +1,13 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const nav = useNavigate();
+  const username = JSON.parse(localStorage.getItem("user"))?.user?.username;
+  const logout = () => {
+    localStorage.removeItem("user");
+    nav("/login");
+  };
   return (
     <>
       <div className="container-fluid fixed-top">
@@ -104,9 +111,35 @@ const Header = () => {
                     3
                   </span>
                 </a>
-                <a href="#" className="my-auto">
-                  <i className="fas fa-user fa-2x" />
-                </a>
+                <div className="nav-item dropdown">
+                  <a href="#" className="my-auto">
+                    <i className="fas fa-user fa-2x" />
+                  </a>
+                  <div className="dropdown-menu">
+                    {username ? (
+                      <li>
+                        <Link to="" className="dropdown-item">
+                          User : {username}
+                        </Link>
+                        <Link to="/admin" className="dropdown-item">
+                          Admin
+                        </Link>
+                        <button className="dropdown-item" onClick={logout}>
+                          Logout
+                        </button>
+                      </li>
+                    ) : (
+                      <li>
+                        <Link to="/register" className="dropdown-item">
+                          Register
+                        </Link>
+                        <Link to="/login" className="dropdown-item">
+                          Login
+                        </Link>
+                      </li>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </nav>

@@ -25,7 +25,7 @@ const Categoryy = ({ categorys, onRemove }: Props) => {
               <td>{item.name}</td>
               <td>
                 <Link
-                  to={`/admin/category/${item.id}`}
+                  to={`/admin/category-edit/${item.id}`}
                   className="btn btn-warning mx-2"
                 >
                   Edit

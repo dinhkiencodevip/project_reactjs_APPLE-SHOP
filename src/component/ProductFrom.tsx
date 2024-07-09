@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Products } from "../interface/product";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { productSchema } from "../validators/validatorsFrom";
 import { Category } from "../interface/category";
+import { instace } from "../api";
 
 type Props = {
   onSubmit: (data: Products | Category) => void;
@@ -16,25 +17,28 @@ const ProductFrom = ({ onSubmit, categorys }: Props) => {
   const {
     register,
     formState: { errors },
-    // reset,
+    reset,
     handleSubmit,
   } = useForm<Products>({
     resolver: zodResolver(productSchema),
   });
-  // useEffect(() => {
-  //   async () => {
-  //     const res = await instace.get(`/products/${id}`);
-  //     console.log(res);
-  //     reset(res.data);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      if (id) {
+        const { data } = await instace.get(`/products/${id}`);
+        reset(data);
+      }
+    };
+
+    fetchData();
+  }, [id, reset]);
   return (
     <div className="edit-addProduct">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit((data) => onSubmit({ ...data, id }))}>
         <h1>{id ? "Edit product" : "Add Product"}</h1>
         <div className="mb-3">
           <label htmlFor="category" className="form-label">
-            Category
+            Brand
           </label>
           <select
             id="category"
@@ -67,16 +71,6 @@ const ProductFrom = ({ onSubmit, categorys }: Props) => {
             type="text"
             className="form-control"
             {...register("images", { required: true })}
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="brand" className="form-label">
-            Brand
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            {...register("brand", { required: true })}
           />
         </div>
         <div className="mb-3">

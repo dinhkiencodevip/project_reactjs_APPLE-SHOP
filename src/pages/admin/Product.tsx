@@ -1,9 +1,9 @@
 import React from "react";
-import { Products } from "../../interface/product";
 import { Link } from "react-router-dom";
+import { Products } from "../../interface/product";
 interface Props {
   products: Products[];
-  onRemove: (id: any) => void;
+  onRemove: (id: number | string) => void;
 }
 
 const Product = ({ products, onRemove }: Props) => {
@@ -19,10 +19,9 @@ const Product = ({ products, onRemove }: Props) => {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Category</th>
+              <th>Brand</th>
               <th>Title</th>
               <th>Image</th>
-              <th>Brand</th>
               <th>Quantity</th>
               <th>Price</th>
               <th>Description</th>
@@ -48,7 +47,6 @@ const Product = ({ products, onRemove }: Props) => {
                     />
                   }
                 </td>
-                <td>{item.brand}</td>
                 <td>{item.quantity}</td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>

@@ -1,13 +1,76 @@
 {
   "products": [
     {
-      "id": "c1d8",
-      "images": "https://cdn.tgdd.vn/Products/Images/42/228743/iphone-12-pro-max-vang-new-600x600-1-600x600.jpg",
-      "brand": "aaa",
-      "title": "aaa123213",
+      "title": "abcascad",
       "price": 123,
       "quantity": 123,
-      "description": "1"
+      "description": "sản phẩm tuyệt vời",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/228743/iphone-12-pro-max-vang-new-600x600-1-600x600.jpg",
+      "category": "IPhone",
+      "id": "c1d8"
+    },
+    {
+      "title": "Iphone 11",
+      "price": 11000,
+      "quantity": 5,
+      "description": "iphone rat dep",
+      "images": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcW9eO047OoqZ9bGj2zOePdSY0KZZAV44aVmRapuyU3lNhu0cXmjhMUpbIKigLphJFGMmSCjQIiLNxDmGUnIqEf4Nogig2qezD459v3Pa0bx9PQyZmVMtLFw&usqp=CAE",
+      "category": "IPhone",
+      "id": "mSCxA7y"
+    },
+    {
+      "title": "Oppo A78",
+      "price": 6990000,
+      "quantity": 10,
+      "description": "Oppo thông minh và hiện đại nhất",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/309847/oppo-a78-xanh-thumb-1-600x600.jpg",
+      "category": "Oppo",
+      "id": "cXR5M6G"
+    },
+    {
+      "title": "Oppo A60",
+      "price": 5090000,
+      "quantity": 20,
+      "description": "có nhiều tính năng mới",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/323543/oppo-a60-blue-thumb-600x600.jpg",
+      "category": "Oppo",
+      "id": "7Erufr_"
+    },
+    {
+      "title": "Galaxy A35 5G",
+      "price": 10090000,
+      "quantity": 7,
+      "description": "samsung hot nhất thị trường",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/321772/samsung-galaxy-a35-5g-xanh-thumb-1-600x600.jpg",
+      "category": "SamSung",
+      "id": "zrxwOlG"
+    },
+    {
+      "title": "Galaxy A25 5G",
+      "price": 6690000,
+      "quantity": 11,
+      "description": "Hiệu năng rất cao",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/310056/samsung-galaxy-a25-5g-xanh-duong-thumb-600x600.jpg",
+      "category": "SamSung",
+      "id": "woP5tlF"
+    },
+    {
+      "title": "Iphone 15 Plus",
+      "price": 22790000,
+      "quantity": 50,
+      "description": "Iphone thế hệ mới nhất",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/303891/iphone-15-plus-hong-128gb-thumb-600x600.jpg",
+      "category": "IPhone",
+      "id": "frP-JT-"
+    },
+    {
+      "title": "Iphone 14 Promax",
+      "price": 30000000,
+      "quantity": 12,
+      "description": "Chip A16 Bionic ",
+      "images": "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-tim-thumb-600x600.jpg",
+      "category": "IPhone",
+      "id": "RFkaJ50"
     }
   ],
   "category": [
@@ -22,6 +85,119 @@
     {
       "id": "c4b7",
       "name": "SamSung"
+    }
+  ],
+  "users": [
+    {
+      "email": "15012004nguyendinhkien@gmail.com",
+      "password": "$2a$10$v8/v63yiO.qBSv98OndS7OVoVLU0e6D1ggL9P34WQMxoNvE3JGUd6",
+      "id": 1
+    },
+    {
+      "email": "15012004nguyendinhkien1@gmail.com",
+      "password": "$2a$10$Kgq8rqhmwEkn9PnUcYr6..ErslRg6E35qwg4UG.rtmGP5E.8iAJli",
+      "id": 2
+    },
+    {
+      "email": "aaa@gmail.com",
+      "password": "$2a$10$INGZog3PCmfGlH2VUhd0.uQRLFO2hbHbUxYYeuqdLUDeEiX1oE.1G",
+      "id": 3
+    },
+    {
+      "email": "kien1243@gmail.com",
+      "password": "$2a$10$QDAJjMds/GFcuLwqpAQVOeyRfpqmvoVAUkTyAoGmNg7goVhqHPCjq",
+      "id": 4
+    },
+    {
+      "email": "kien@gmail.com",
+      "password": "$2a$10$1a8IaWNo8WzM57PDwYMXoO.lzTPq5iPCWn/x08ZPmfK4EVUVMCHx2",
+      "id": 5
+    },
+    {
+      "email": "kien1@gmail.com",
+      "password": "$2a$10$Az7NK9eMYJuGJPkQ.j.29e8EckTIOOvYb06ErZdODjvhoUK6xuvpK",
+      "id": 6
+    },
+    {
+      "email": "kien11@gmail.com",
+      "password": "$2a$10$U6OSdntuTPnLtCKT30fmBehIys4E3pJAM8bQT/4eZHg26l2UT6gfK",
+      "id": 7
+    },
+    {
+      "email": "150120041nguyendinhkien@gmail.com",
+      "password": "$2a$10$nFtZe0oy/vcSkIx3ZyaL/.aUK2wNcWiQ4AypkQTK.defD.OesCo72",
+      "repassword": "aaaaaaaaaaaaaaa",
+      "id": 8
+    },
+    {
+      "email": "15012004111nguyendinhkien@gmail.com",
+      "password": "$2a$10$bRkQCZ7NB/Wop57XSMdWU.zVOqCYNGPTvpmfWSsjUHK3mDFUOcXNy",
+      "repassword": "123123213123",
+      "id": 9
+    },
+    {
+      "email": "1501200411nguyendinhkien@gmail.com",
+      "password": "$2a$10$L89eix7Qqhef2FGWB6r8EOmgtxTP2TCQJOU2fOxPrThE3WKl8ZUae",
+      "repassword": "aaaaaaaaaaaaaaaaaaaaa",
+      "id": 10
+    },
+    {
+      "email": "1501200411ng1uyendinhkien@gmail.com",
+      "password": "$2a$10$nIOE5JDlDLSO9mCE.gqgpuTXb7aBTyB7QTWzgDMlaSmRFv/VSgK62",
+      "repassword": " <div className=\"mb-3\">           <label htmlFor=\"name\" className=\"form-label\">             Password           </label>           <input             type=\"password\"             className=\"form-control\"             {...register(\"password\")}           ></input>           {errors.password && (             <span className=\"text-danger\">{errors.password.message}</span>           )}         </div>",
+      "id": 11
+    },
+    {
+      "email": "aa@gmail.com",
+      "password": "$2a$10$QcAEz7cTRGhTz5FiOptx4engNUbU.bZScomkc2JZRjKA6Eu6.zDby",
+      "id": 12
+    },
+    {
+      "email": "aaaa@gmail.com",
+      "password": "$2a$10$G1K7uwl16KmHOZgR7aozlev3YLmrefCsUHobCApWPArJh/5WDrDwK",
+      "id": 13
+    },
+    {
+      "email": "aaaaa@gmail.com",
+      "password": "$2a$10$cVvn387FTJuO9LjTDAAtquvbEMll.nEEJ9tdXKDAFzYE9OAcUtGo2",
+      "username": "kiennnnnnn",
+      "id": 14
+    },
+    {
+      "email": "aaaaaa@gmail.com",
+      "password": "$2a$10$uDKEloePuH4K/Zdye5pGKe8Td22jKYFH7ULZIda1R8l6isTWIAOHm",
+      "username": "kiennnnnnn",
+      "id": 15
+    },
+    {
+      "email": "150120044nguyendinhkien@gmail.com",
+      "password": "$2a$10$R8WHSqX4IJuo7Xs18TZFI.nELF7i4EtcdBNh8QNIG4qcOqqh9I2l.",
+      "username": "kien1@gmail.com",
+      "id": 16
+    },
+    {
+      "email": "11@gmail.com",
+      "password": "$2a$10$ozW77krQIBb8HltXucu8nOlkJJWVdI.rPXwicPz2/nuP8XbyudDka",
+      "username": "kien1@gmail.com",
+      "id": 17
+    },
+    {
+      "email": "15012004nguyendinhkien11@gmail.com",
+      "password": "$2a$10$7AqZgf2am2SJ7V1n1Ixwq.i8yARHTKgPc7zlU7UN49kTe0rRarWny",
+      "username": "kien1",
+      "id": 18
+    },
+    {
+      "email": "a1@gmail.com",
+      "password": "$2a$10$T6xzFURspPSM1/MFNNjB9.p28aHUNb30pUGSduLV8GKxei.Y0DCDS",
+      "username": "kien",
+      "id": 19
+    },
+    {
+      "email": "kien1111@gmail.com",
+      "password": "$2a$10$/FO1XkKG6nXB6YA5EJ5L8.Tyk3l3nFpqX4o4t0O03NiE1f.PkHZgi",
+      "username": "kien",
+      "id": 20
     }
   ]
 }

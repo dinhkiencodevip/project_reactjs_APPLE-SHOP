@@ -24,10 +24,16 @@ const AddEditProduct = () => {
   useEffect(() => {
     fetchCategory();
   }, []);
-  const onSubmitProduct = async (data: Products) => {
-    const res = await instace.post(`/products`, data);
-    setProducts([...products, res.data]);
-    if (confirm("Thêm sản phẩm thành công")) {
+  const onSubmitProduct = async (data: Products | Category) => {
+    if (data.id) {
+      await instace.put(`/products/${data.id}`, data);
+      const newData = await instace.get("/products");
+      setProducts(newData.data);
+    } else {
+      const res = await instace.post(`/products`, data);
+      setProducts([...products, res.data]);
+    }
+    if (confirm("Succesfull, redirect to admin page?")) {
       nav("/admin/product");
     }
   };

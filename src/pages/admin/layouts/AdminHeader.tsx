@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const AdminHeader = () => {
+  const nav = useNavigate();
+  const logout = () => {
+    localStorage.removeItem("user");
+    nav("/");
+  };
   return (
     <div>
       {/* Navbar Start */}
@@ -132,9 +138,9 @@ const AdminHeader = () => {
               <a href="#" className="dropdown-item">
                 Settings
               </a>
-              <a href="#" className="dropdown-item">
-                Log Out
-              </a>
+              <button className="dropdown-item" onClick={logout}>
+                Logout
+              </button>
             </div>
           </div>
         </div>

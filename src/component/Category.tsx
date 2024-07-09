@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Category } from "../interface/category";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { CategorySchema } from "../validators/validatorsFrom";
+import { instace } from "../api";
 
 type Props = {
   onSubmit: (data: Category) => void;
@@ -14,11 +15,20 @@ const CategoryFrom = ({ onSubmit }: Props) => {
   const {
     register,
     formState: { errors },
+    reset,
     handleSubmit,
   } = useForm<Category>({
     resolver: zodResolver(CategorySchema),
   });
-
+  useEffect(() => {
+    const fetchData = async () => {
+      if (id) {
+        const { data } = await instace.get(`/category/${id}`);
+        reset(data);
+      }
+    };
+    fetchData();
+  }, [id, reset]);
   return (
     <div className="edit-addProduct">
       <form onSubmit={handleSubmit(onSubmit)}>

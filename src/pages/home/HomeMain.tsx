@@ -1,18 +1,15 @@
-import React from "react";
-import Header from "./header";
-import Banner from "./banner";
-import Icon from "./icon";
-import Menu from "./Menu";
-import Products from "./Products";
-import SellIcon from "./SellIcon";
-import DisCount from "./DisCount";
-import BestSeller from "./BestSeller";
-import Footer from "./Footer";
+import HomeLayout from "./HomeLayout/HomeLayout";
+import Banner from "./HomeLayout/banner";
+import BestSeller from "./HomeLayout/BestSeller";
+import DisCount from "./HomeLayout/DisCount";
+import Icon from "./HomeLayout/icon";
+import Menu from "./HomeLayout/Menu";
+import Products from "./HomeLayout/Products";
+import SellIcon from "./HomeLayout/SellIcon";
 
 const HomeMain = () => {
   return (
-    <div>
-      <Header></Header>
+    <HomeLayout>
       <Banner></Banner>
       <Icon></Icon>
       <Menu></Menu>
@@ -20,8 +17,7 @@ const HomeMain = () => {
       <SellIcon />
       <DisCount />
       <BestSeller />
-      <Footer />
-    </div>
+    </HomeLayout>
   );
 };
 

@@ -16,20 +16,12 @@ const AdminProduct = () => {
     fetchProducts();
   }, []);
   //Product
-  const handleRemove = async (id: any) => {
+  const handleRemove = async (id: number | string) => {
     if (confirm("Bạn chắc chắn muốn xóa không")) {
       await instace.delete(`/products/${id}`);
       setProducts(products.filter((item) => item.id !== id));
     }
   };
-
-  //   const onSubmitProduct = async (data: Products) => {
-  //     const res = await instace.post(`/products`, data);
-  //     setProducts([...products, res.data]);
-  //     if (confirm("Thêm sản phẩm thành công")) {
-  //       nav("/admin");
-  //     }
-  //   };
   return (
     <AdminLayout>
       <Product products={products} onRemove={handleRemove}></Product>
