@@ -11,6 +11,11 @@ const Product = ({ products, onRemove }: Props) => {
     <div className="product">
       {/* Product */}
       <h2>Product</h2>
+      <Link to="/admin/product-add" className="btn btn-primary">
+        Thêm sản phẩm
+      </Link>
+      <br />
+      <br />
       <div className="row">
         <table
           className="table table-bodered table-striped text-center"
@@ -69,9 +74,6 @@ const Product = ({ products, onRemove }: Props) => {
           </tbody>
         </table>
       </div>
-      <Link to="/admin/product-add" className="btn btn-primary">
-        Thêm sản phẩm
-      </Link>
     </div>
   );
 };

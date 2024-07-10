@@ -10,7 +10,15 @@ const Categoryy = ({ categorys, onRemove }: Props) => {
   return (
     <div className="product">
       <h2>Category</h2>
-      <table className="table table-bodered table-striped text-center ">
+      <Link to="/admin/category-add" className="btn btn-primary">
+        Add Category
+      </Link>
+      <br />
+      <br />
+      <table
+        className="table table-bodered table-striped text-center "
+        border={2}
+      >
         <thead>
           <tr>
             <th>ID</th>
@@ -41,9 +49,6 @@ const Categoryy = ({ categorys, onRemove }: Props) => {
           ))}
         </tbody>
       </table>
-      <Link to="/admin/category-add" className="btn btn-primary">
-        Add Category
-      </Link>
     </div>
   );
 };

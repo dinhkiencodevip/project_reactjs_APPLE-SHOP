@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "title": "abcascad",
+      "title": "IPhone 13 Promax",
       "price": 123,
       "quantity": 123,
       "description": "sản phẩm tuyệt vời",
@@ -89,75 +89,6 @@
   ],
   "users": [
     {
-      "email": "15012004nguyendinhkien@gmail.com",
-      "password": "$2a$10$v8/v63yiO.qBSv98OndS7OVoVLU0e6D1ggL9P34WQMxoNvE3JGUd6",
-      "id": 1
-    },
-    {
-      "email": "15012004nguyendinhkien1@gmail.com",
-      "password": "$2a$10$Kgq8rqhmwEkn9PnUcYr6..ErslRg6E35qwg4UG.rtmGP5E.8iAJli",
-      "id": 2
-    },
-    {
-      "email": "aaa@gmail.com",
-      "password": "$2a$10$INGZog3PCmfGlH2VUhd0.uQRLFO2hbHbUxYYeuqdLUDeEiX1oE.1G",
-      "id": 3
-    },
-    {
-      "email": "kien1243@gmail.com",
-      "password": "$2a$10$QDAJjMds/GFcuLwqpAQVOeyRfpqmvoVAUkTyAoGmNg7goVhqHPCjq",
-      "id": 4
-    },
-    {
-      "email": "kien@gmail.com",
-      "password": "$2a$10$1a8IaWNo8WzM57PDwYMXoO.lzTPq5iPCWn/x08ZPmfK4EVUVMCHx2",
-      "id": 5
-    },
-    {
-      "email": "kien1@gmail.com",
-      "password": "$2a$10$Az7NK9eMYJuGJPkQ.j.29e8EckTIOOvYb06ErZdODjvhoUK6xuvpK",
-      "id": 6
-    },
-    {
-      "email": "kien11@gmail.com",
-      "password": "$2a$10$U6OSdntuTPnLtCKT30fmBehIys4E3pJAM8bQT/4eZHg26l2UT6gfK",
-      "id": 7
-    },
-    {
-      "email": "150120041nguyendinhkien@gmail.com",
-      "password": "$2a$10$nFtZe0oy/vcSkIx3ZyaL/.aUK2wNcWiQ4AypkQTK.defD.OesCo72",
-      "repassword": "aaaaaaaaaaaaaaa",
-      "id": 8
-    },
-    {
-      "email": "15012004111nguyendinhkien@gmail.com",
-      "password": "$2a$10$bRkQCZ7NB/Wop57XSMdWU.zVOqCYNGPTvpmfWSsjUHK3mDFUOcXNy",
-      "repassword": "123123213123",
-      "id": 9
-    },
-    {
-      "email": "1501200411nguyendinhkien@gmail.com",
-      "password": "$2a$10$L89eix7Qqhef2FGWB6r8EOmgtxTP2TCQJOU2fOxPrThE3WKl8ZUae",
-      "repassword": "aaaaaaaaaaaaaaaaaaaaa",
-      "id": 10
-    },
-    {
-      "email": "1501200411ng1uyendinhkien@gmail.com",
-      "password": "$2a$10$nIOE5JDlDLSO9mCE.gqgpuTXb7aBTyB7QTWzgDMlaSmRFv/VSgK62",
-      "repassword": " <div className=\"mb-3\">           <label htmlFor=\"name\" className=\"form-label\">             Password           </label>           <input             type=\"password\"             className=\"form-control\"             {...register(\"password\")}           ></input>           {errors.password && (             <span className=\"text-danger\">{errors.password.message}</span>           )}         </div>",
-      "id": 11
-    },
-    {
-      "email": "aa@gmail.com",
-      "password": "$2a$10$QcAEz7cTRGhTz5FiOptx4engNUbU.bZScomkc2JZRjKA6Eu6.zDby",
-      "id": 12
-    },
-    {
-      "email": "aaaa@gmail.com",
-      "password": "$2a$10$G1K7uwl16KmHOZgR7aozlev3YLmrefCsUHobCApWPArJh/5WDrDwK",
-      "id": 13
-    },
-    {
       "email": "aaaaa@gmail.com",
       "password": "$2a$10$cVvn387FTJuO9LjTDAAtquvbEMll.nEEJ9tdXKDAFzYE9OAcUtGo2",
       "username": "kiennnnnnn",
@@ -198,6 +129,12 @@
       "password": "$2a$10$/FO1XkKG6nXB6YA5EJ5L8.Tyk3l3nFpqX4o4t0O03NiE1f.PkHZgi",
       "username": "kien",
       "id": 20
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$FF2Vl5vKGLyxA.hIJz.VsuDvGOLmMMFL35t5dSLm65iVt8WYOwB/q",
+      "username": "admin",
+      "id": 21
     }
   ]
 }

@@ -19,6 +19,8 @@ const RegisterFrom = ({ onSubmit }: Props) => {
   return (
     <div className="Register">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <br />
+        <hr />
         <h1>Register</h1>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">

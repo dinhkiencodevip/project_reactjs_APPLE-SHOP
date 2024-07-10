@@ -10,7 +10,7 @@ const AdminHeader = () => {
   return (
     <div>
       {/* Navbar Start */}
-      <nav className="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+      <nav className="navbar navbar-expand bg-light navbar-light sticky px-3 py-3">
         <a href="index.html" className="navbar-brand d-flex d-lg-none me-4">
           <h2 className="text-primary mb-0">
             <i className="fa fa-hashtag" />
@@ -20,11 +20,7 @@ const AdminHeader = () => {
           <i className="fa fa-bars" />
         </a>
         <form className="d-none d-md-flex ms-4">
-          <input
-            className="form-control border-0"
-            type="search"
-            placeholder="Search"
-          />
+          <input className="form-control1" type="search" placeholder="Search" />
         </form>
         <div className="navbar-nav align-items-center ms-auto">
           <div className="nav-item dropdown">
